@@ -31,7 +31,11 @@
       <img src="{{ block.settings.product.featured_image | img_url: 'medium' }}" alt="{{ block.settings.product.title }}">
       <p>{{ block.settings.product.description }}</p>
       <p>Price: {{ block.settings.product.price | money }}</p>
-      <a href="{{ block.settings.product.url }}" class="btn">View Product</a>
+      <form method="post" action="/cart/add">
+        <input type="hidden" name="id" value="{{ block.settings.product.variants.first.id }}">
+        {{ block.settings.product | form: 'product' }}
+        <button type="submit">Add to Cart</button>
+      </form>
     </div>
   {% endif %}
 {% endfor %}
