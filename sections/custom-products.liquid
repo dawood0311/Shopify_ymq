@@ -28,14 +28,13 @@
   {% if block.settings.product %}
     <div class="custom-product">
       <h2>{{ block.settings.product.title }}</h2>
-      <img src="{{ block.settings.product.featured_image | img_url: 'medium' }}" alt="{{ block.settings.product.title }}">
+      <a href="{{ block.settings.product.url }}">
+        <img src="{{ block.settings.product.featured_image | img_url: 'medium' }}" alt="{{ block.settings.product.title }}">
+      </a>
       <p>{{ block.settings.product.description }}</p>
       <p>Price: {{ block.settings.product.price | money }}</p>
-      <form method="post" action="/cart/add">
-        <input type="hidden" name="id" value="{{ block.settings.product.variants.first.id }}">
-        {{ block.settings.product | form: 'product' }}
-        <button type="submit">Add to Cart</button>
-      </form>
+      <a href="{{ block.settings.product.url }}" class="btn">View Product</a>
     </div>
   {% endif %}
 {% endfor %}
+
