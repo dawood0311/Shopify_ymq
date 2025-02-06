@@ -26,10 +26,6 @@
 
 {% for block in section.blocks %}
   {% if block.settings.product %}
-    <script>
-      history.replaceState({}, '', '{{ block.settings.product.url }}');
-    </script>
-
     <div class="custom-product">
       <h2>{{ block.settings.product.title }}</h2>
       <img src="{{ block.settings.product.featured_image | img_url: 'medium' }}" alt="{{ block.settings.product.title }}">
@@ -43,13 +39,3 @@
     </div>
   {% endif %}
 {% endfor %}
-
-<script>
-  window.onload = function() {
-    setTimeout(function() {
-      if (typeof ymq_product_options !== "undefined") {
-        ymq_product_options.load();
-      }
-    }, 1000);
-  };
-</script>
