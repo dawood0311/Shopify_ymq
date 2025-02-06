@@ -39,3 +39,13 @@
     </div>
   {% endif %}
 {% endfor %}
+
+<script>
+  window.onload = function() {
+    setTimeout(function() {
+      if (typeof ymq_product_options !== "undefined") {
+        ymq_product_options.load();
+      }
+    }, 1000);
+  };
+</script>
