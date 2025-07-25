@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -511,6 +520,23 @@
       "send_on_label": "Senden am (optional)",
       "expanded": "Formular für den Empfänger des Geschenkgutscheins erweitert",
       "collapsed": "Formular für den Empfänger des Geschenkgutscheins minimiert"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "local_pickup": {
+        "location_information_next": {
+          "one": "Es gibt %{count} Standorte mit Lagerbestand in Ihrer Nähe",
+          "other": "Es gibt %{count} Standorte mit Lagerbestand in Ihrer Nähe"
+        }
+      },
+      "one": {
+        "errors": {
+          "merchandise": {
+            "signature_mismatch": "Die Warensignatur stimmt für die Zeile {{stable_id}} nicht überein."
+          }
+        }
+      }
     }
   }
 }
